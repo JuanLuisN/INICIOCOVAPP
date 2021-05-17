@@ -1,0 +1,55 @@
+<!--Including the header from partials-->
+<%-include('partials/_header.ejs');-%>
+<h5 class="negritas text-center fondo-titulo white-text border">Hospitales de antención</h5>
+<hr class="hr-border">
+<section class="center-on-small-only consejos" style="margin-bottom: 100px;">
+   <% if(data){ %>
+        <% for (var i=0; i < data.length; i++){%>
+            <div>
+                <ul class="collapsible popout">
+                    <li>               
+                        <div class="collapsible-header grey lighten-3 border">
+                            <i class="material-icons">announcement</i>
+                            <h6><%=data[i].nombre%></h6>
+                        </div>
+                        <%  if(data[i].nombre=='HOSPITAL REGIONAL DE ZONA NO. 7'){ %>
+                        <div class="collapsible-body indigo lighten-5 border center-align">                    
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3949.2247596291163!2d-101.92127716253275!3d21.377137581768622!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x552daba7bf7649bd!2sInstituto%20Mexicano%20del%20Seguro%20Social%20Hospital%20General%20de%20Zona%20con%20Unidad%20M%C3%A9dica%20de%20Atenci%C3%B3n%20Ambulatoria%20N%C3%BAmero%207!5e0!3m2!1sen!2smx!4v1620919664532!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                           
+                          <%  } %>
+                          <%  if(data[i].nombre=='HOSPITAL GENERAL LAGOS DE MORENO'){ %>
+                            <div class="collapsible-body indigo lighten-5 border center-align">                    
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2307.6255989572524!2d-101.97203053899015!3d21.322169961785068!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bd1510ee2b5b7%3A0xafa6504a433f8e07!2sHospital%20General%20Lagos%20de%20Moreno!5e0!3m2!1ses!2smx!4v1620919954993!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                 
+                          <%  } %>  
+                          <%  if(data[i].nombre=='UNIDAD MEDICA FAMILIAR 177'){ %>
+                            <div class="collapsible-body indigo lighten-5 border center-align">                    
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d928.9495480047195!2d-101.92608287399673!3d21.35845394566081!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9e914a790be2dc78!2sIMSS%20UMF%20177!5e0!3m2!1sen!2smx!4v1620920372624!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        
+                          <%  } %>                                                
+                            <h6 class="negritas">Nivel de atención:</h6>
+                            <% if(data[i].nivelaten !=1 &&data[i].nivelaten !=2 ) { %>
+                                <p class="text-mediana">Nivel de Antencion desconocido</p>
+                          <%  } %>
+                           <% if(data[i].nivelaten==1) { %>
+                                <p class="text-mediana"><%=data[i].nivelaten%> (Sintomas Leves)</p>
+                          <%  } %>
+                          <% if(data[i].nivelaten==2) { %>
+                            <p class="text-mediana"><%=data[i].nivelaten%> (Sintomas Graves)</p>
+                          <% } %>                     
+                            <h6 class="negritas">Dirección: <%=data[i].direccion%></h6>
+                            <h6 class="negritas">Numero de atención: <%=data[i].telefono%></h6>
+                        </div>
+                    </li>           
+                </ul>
+            </div>
+       <% }%>  
+    <% } %> 
+</section>
+<h5 class="left-align">Última actualización: <%=casos[0].fecha%></h5>
+
+         <!-- including the Footer from partials-->
+         <%-include('partials/_footer.ejs');-%>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>
+

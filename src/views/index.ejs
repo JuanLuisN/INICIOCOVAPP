@@ -1,0 +1,88 @@
+<!--Including the header from partials-->
+<%-include('partials/_header.ejs');-%>
+        <%if(casos[0].semaforo=='Naranja') {%>
+            <div id="modal1" class="modal deep-orange darken-3 white-text">
+                <div class="modal-content">
+                <h4>Semaforo Naranja</h4>
+                <p>Si puedes, quedate en casa y si sales, manten todas las prevenciones posibles.</p>
+                <hr>
+                </div>
+                <div class="modal-footer deep-orange darken-3">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat white-text">Entendido</a>
+                </div>
+            </div>
+        <%}%>
+        <%if(casos[0].semaforo=='Verde') {%>
+            <div id="modal1" class="modal green darken-4 white-text">
+                <div class="modal-content">
+                <h4>Semaforo Verde</h4>
+                <p>Se puede salir pero con precaución y prevención. No te confíes.</p>
+                <hr>
+                </div>
+                <div class="modal-footer green darken-4">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat white-text">Entendido</a>
+                </div>
+            </div>
+        <%}%>
+        <%if(casos[0].semaforo=='Rojo') {%>
+            <div id="modal1" class="modal red darken-4 white-text">
+                <div class="modal-content">
+                <h4>Semaforo Rojo</h4>
+                <p>No salgas si no es estrictamente necesario. Tenemos que disminuir los contagios.</p>
+                <hr>
+                </div>
+                <div class="modal-footer red darken-4">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat white-text">Entendido</a>
+                </div>
+            </div>
+        <%}%>
+        <%if(casos[0].semaforo=='Amarillo') {%>
+            <div id="modal1" class="modal amber darken-2 white-text">
+                <div class="modal-content">
+                <h4>Semaforo Amarillo</h4>
+                <p>Hay mas actividades pero con precaucion y prevención, tienes que cuidarte.</p>
+                <hr>
+                </div>
+                <div class="modal-footer amber darken-2">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat white-text">Entendido</a>
+                </div>
+            </div>
+        <%}%>
+        <h5 class="negritas text-center fondo-titulo white-text border">Casos COVID-19 en Lagos de Moreno</h5>
+        <hr class="hr-border">
+        <section class="contenedor flex">
+            <div class="columnaP border-red red darken-4 white-text">
+                <h5>Casos totales confirmados</h5>
+                <hr>
+                <p class="datos"><%=casos[0].confirmados%></p>
+            </div>
+            <div class="columnas border-grey black white-text">
+                <h5>Defunciones</h5>
+                <hr>
+                <p class="datos"><%=casos[0].defunciones%></p>
+            </div>
+            <div class="columnas border-green green darken-4 white-text">
+                <h5>Recuperados</h5>
+                <hr>
+                <p class="datos"><%=casos[0].recuperados%></p>
+            </div>
+            <div class="columnas border-yellow amber darken-2 white-text">
+                <h5>Casos activos</h5>
+                <hr>
+                <p class="datos"><%=casos[0].activos%></p>
+            </div>
+            <div class="columnas border-orange deep-orange darken-3 white-text">
+                <h5>Sospechosos</h5>
+                <hr>
+                <p class="datos"><%=casos[0].sospechosos%></p>
+            </div>
+            <h5 class="right-align">Última actualización: <%=casos[0].fecha%></h5>
+        </section>        
+        <!-- including the Footer from partials-->
+        <%-include('partials/_footer.ejs');-%>        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./js/init.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>    
+</body>
+</html>

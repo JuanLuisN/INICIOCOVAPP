@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./css/materialize.min.css"  media="screen,projection"/>
+
+    <link rel="stylesheet" href="./css/Pestañas.css">
+    <link rel="stylesheet" href="./css/Contenedor.css">
+    <title>Casos COVID-19</title>
+</head>
+<body>
+    <div>
+        <header class="encabezado brown darken-4">
+            <div class="nav-wrapper">
+                <%if(casos[0].semaforo=='Naranja') {%>
+                <a href="/" class="brand-logo left"><img src="./Recursos/virusN.png"></a>
+                <%}%>
+                <%if(casos[0].semaforo=='Verde') {%>
+                    <a href="/" class="brand-logo left"><img src="./Recursos/virusV.png"></a>
+                <%}%>
+                <%if(casos[0].semaforo=='Rojo') {%>
+                    <a href="/" class="brand-logo left"><img src="./Recursos/virusR.png"></a>
+                <%}%>
+                <%if(casos[0].semaforo=='Amarillo') {%>
+                    <a href="/" class="brand-logo left"><img src="./Recursos/virusA.png"></a>
+                <%}%>
+                <h4 class="brand-logo right negritas">&nbspCOVAPP</h4>
+            </div>            
+        </header>
+        <nav class="brown darken-4">
+            <a href="/" class="pestaña">
+                <i class="material-icons waves-effect">add_circle</i>
+                <p class="ocultar">&nbspCasos</p>
+            </a>
+            <a href="/hospitales" class="pestaña">
+                <i class="material-icons waves-effect">healing</i>
+                <p class="ocultar">&nbspHospitales</p>
+            </a>
+            <a href="/consejos" class="pestaña">
+                <i class="material-icons waves-effect">help</i>
+                <p class="ocultar">&nbspConsejos</p>
+            </a>
+            <a href="/vacunas" class="pestaña">
+                <i class="material-icons waves-effect">favorite</i>
+                <p class="ocultar">&nbspVacunas</p>
+            </a>
+        </nav>
+       
