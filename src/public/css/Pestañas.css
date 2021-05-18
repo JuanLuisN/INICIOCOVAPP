@@ -85,6 +85,10 @@ nav{
     margin-bottom: 20px;
 }
 
+.margin-footer{
+    margin-bottom: 100px;   
+}
+
 .fondo-titulo{
     background: #4e342e;
     padding-top: 10px;
