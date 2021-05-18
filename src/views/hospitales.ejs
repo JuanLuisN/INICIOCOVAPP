@@ -3,10 +3,10 @@
 <h5 class="negritas text-center fondo-titulo white-text border">Hospitales de antención</h5>
 <hr class="hr-border">
 <section class="center-on-small-only consejos" style="margin-bottom: 100px;">
-   <% if(data){ %>
-        <% for (var i=0; i < data.length; i++){%>
             <div>
                 <ul class="collapsible popout">
+                  <% if(data){ %>
+                  <% for (var i=0; i < data.length; i++){%>
                     <li> 
                     <%if(data[i].nombre=='HOSPITAL REGIONAL DE ZONA NO. 7 / H.G.Z NO. 7 / EL TEPEYAC'){ %>
                         <div class="collapsible-header blue darken-2 white-text border">
@@ -43,11 +43,11 @@
                             <h6 class="negritas">Numero de atención:</h6>
                             <p class="text-mediana"><%=data[i].telefono%></p>
                         </div>
-                    </li>           
+                    </li>
+                  <% }%>  
+                  <% } %> 
                 </ul>
             </div>
-       <% }%>  
-    <% } %> 
 </section>
 <h5 class="left-align">Última actualización: <%=casos[0].fecha%></h5>
 
