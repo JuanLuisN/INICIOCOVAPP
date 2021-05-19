@@ -18,6 +18,7 @@ main{
     flex-flow: column nowrap;
 }
 
+
 .consejos{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -162,6 +163,10 @@ nav{
     padding: 20px;
     /*border-radius: 10px;*/
     margin-top: 20px;
+}
+iframe {
+ max-width: 100%;
+ height: auto;
 }
 
 @media (max-width: 600px) {
