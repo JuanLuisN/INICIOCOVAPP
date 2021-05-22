@@ -17,36 +17,40 @@
         <header class="encabezado brown darken-4">
             <div class="nav-wrapper">
                 <%if(casos[0].semaforo=='Naranja') {%>
-                <a href="/" class="brand-logo left"><img src="./Recursos/virusN.png"></a>
+                <a href="/" class="brand-logo left" data-bs-toggle="tooltip" data-bs-placement="top" title="Semaforo en naranja"><img src="./Recursos/virusN.png"></a>
                 <%}%>
                 <%if(casos[0].semaforo=='Verde') {%>
-                    <a href="/" class="brand-logo left"><img src="./Recursos/virusV.png"></a>
+                    <a href="/" class="brand-logo left" data-bs-toggle="tooltip" data-bs-placement="top" title="Semaforo en verde"><img src="./Recursos/virusV.png"></a>
                 <%}%>
                 <%if(casos[0].semaforo=='Rojo') {%>
-                    <a href="/" class="brand-logo left"><img src="./Recursos/virusR.png"></a>
+                    <a href="/" class="brand-logo left" data-bs-toggle="tooltip" data-bs-placement="top" title="Semaforo en Rojo"><img src="./Recursos/virusR.png"></a>
                 <%}%>
                 <%if(casos[0].semaforo=='Amarillo') {%>
-                    <a href="/" class="brand-logo left"><img src="./Recursos/virusA.png"></a>
+                    <a href="/" class="brand-logo left" data-bs-toggle="tooltip" data-bs-placement="top" title="Semaforo en Amarillo"><img src="./Recursos/virusA.png"></a>
                 <%}%>
-                <h4 class="brand-logo right negritas">&nbspCOVAPP</h4>
+                <h4 class="brand-logo right negritas" data-bs-toggle="tooltip" data-bs-placement="top" title="Volver a inicio">
+                    <a href="/" class="white-text">&nbspCOVAPP</a>
+                </h4>
             </div>            
         </header>
         <nav class="brown darken-4">
-            <a href="/" class="pestaña">
+            <a href="/" class="pestaña" data-bs-toggle="tooltip" data-bs-placement="top" title="Casos en Lagos de Moreno">
                 <i class="material-icons waves-effect">add_circle</i>
                 <p class="ocultar">&nbspCasos</p>
             </a>
-            <a href="/hospitales" class="pestaña">
+            <a href="/hospitales" class="pestaña" data-bs-toggle="tooltip" data-bs-placement="top" title="Hospitales de atencion">
                 <i class="material-icons waves-effect">healing</i>
                 <p class="ocultar">&nbspHospitales</p>
             </a>
-            <a href="/consejos" class="pestaña">
+            <a href="/consejos" class="pestaña" data-bs-toggle="tooltip" data-bs-placement="top" title="Consejos de prevencion">
                 <i class="material-icons waves-effect">help</i>
                 <p class="ocultar">&nbspConsejos</p>
             </a>
-            <a href="/vacunas" class="pestaña">
+            <a href="/vacunas" id="tipvacunas" class="pestaña" data-bs-custom-class="beautifier" data-bs-toggle="tooltip" data-bs-placement="top" title="Vacunas en lagos de Moreno">
                 <i class="material-icons waves-effect">favorite</i>
                 <p class="ocultar">&nbspVacunas</p>
             </a>
         </nav>
+       
+
        
