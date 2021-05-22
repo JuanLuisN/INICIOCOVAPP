@@ -7,6 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./css/materialize.min.css"  media="screen,projection"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./js/init.js"></script>
+    <script type="text/javascript" src="./js/materialize.min.js"></script>
 
     <link rel="stylesheet" href="./css/Pestañas.css">
     <link rel="stylesheet" href="./css/Contenedor.css">
@@ -17,40 +20,38 @@
         <header class="encabezado brown darken-4">
             <div class="nav-wrapper">
                 <%if(casos[0].semaforo=='Naranja') {%>
-                <a href="/" class="brand-logo left" data-bs-toggle="tooltip" data-bs-placement="top" title="Semaforo en naranja"><img src="./Recursos/virusN.png"></a>
+                <a href="/" class="brand-logo left tooltipped" data-position="left" data-tooltip="Semáforo en Naranja"><img src="./Recursos/virusN.png"></a>
                 <%}%>
                 <%if(casos[0].semaforo=='Verde') {%>
-                    <a href="/" class="brand-logo left" data-bs-toggle="tooltip" data-bs-placement="top" title="Semaforo en verde"><img src="./Recursos/virusV.png"></a>
+                    <a href="/" class="brand-logo left tooltipped" data-position="left" data-tooltip="Semáforo en Verde" ><img src="./Recursos/virusV.png"></a>
                 <%}%>
                 <%if(casos[0].semaforo=='Rojo') {%>
-                    <a href="/" class="brand-logo left" data-bs-toggle="tooltip" data-bs-placement="top" title="Semaforo en Rojo"><img src="./Recursos/virusR.png"></a>
+                    <a href="/" class="brand-logo left tooltipped" data-position="left" data-tooltip="Semáforo en Rojo" ><img src="./Recursos/virusR.png"></a>
                 <%}%>
                 <%if(casos[0].semaforo=='Amarillo') {%>
-                    <a href="/" class="brand-logo left" data-bs-toggle="tooltip" data-bs-placement="top" title="Semaforo en Amarillo"><img src="./Recursos/virusA.png"></a>
+                    <a href="/" class="brand-logo left tooltipped" data-position="left" data-tooltip="Semáforo en Amarillo"><img src="./Recursos/virusA.png"></a>
                 <%}%>
-                <h4 class="brand-logo right negritas" data-bs-toggle="tooltip" data-bs-placement="top" title="Volver a inicio">
-                    <a href="/" class="white-text">&nbspCOVAPP</a>
+                <h4 class="brand-logo right negritas">
+                    <a href="/" class=" tooltipped white-text" data-position="right" data-tooltip="Volver a inicio">&nbspCOVAPP</a>
                 </h4>
             </div>            
         </header>
         <nav class="brown darken-4">
-            <a href="/" class="pestaña" data-bs-toggle="tooltip" data-bs-placement="top" title="Casos en Lagos de Moreno">
+            <a href="/" class="pestaña tooltipped" data-position="left" data-tooltip="Casos en Lagos de Moreno">
                 <i class="material-icons waves-effect">add_circle</i>
                 <p class="ocultar">&nbspCasos</p>
             </a>
-            <a href="/hospitales" class="pestaña" data-bs-toggle="tooltip" data-bs-placement="top" title="Hospitales de atencion">
+            <a href="/hospitales" class="pestaña tooltipped" data-position="bottom" data-tooltip="Hospitales COVID">
                 <i class="material-icons waves-effect">healing</i>
                 <p class="ocultar">&nbspHospitales</p>
             </a>
-            <a href="/consejos" class="pestaña" data-bs-toggle="tooltip" data-bs-placement="top" title="Consejos de prevencion">
+            <a href="/consejos" class="pestaña tooltipped" data-bs-toggle="tooltip"  data-position="bottom" data-tooltip="Consejos COVID">
                 <i class="material-icons waves-effect">help</i>
                 <p class="ocultar">&nbspConsejos</p>
             </a>
-            <a href="/vacunas" id="tipvacunas" class="pestaña" data-bs-custom-class="beautifier" data-bs-toggle="tooltip" data-bs-placement="top" title="Vacunas en lagos de Moreno">
+            <a href="/vacunas" class="pestaña tooltipped" data-position="right" data-tooltip="Vacunas en Lagos de Moreno">
                 <i class="material-icons waves-effect">favorite</i>
                 <p class="ocultar">&nbspVacunas</p>
             </a>
         </nav>
-       
-
        
