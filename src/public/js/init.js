@@ -13,6 +13,15 @@
             $('#modal1').modal();
             $('#modal1').modal('open'); 
         });
+         $(document).ready(function(){
+            $('.tooltipped').tooltip();
+            $('.tooltipped').tooltip('open');
+        
+          });
+          $(document).scroll(function(){
+            $('.tooltipped').tooltip();
+            $('.tooltipped').tooltip('close');
+          });
 
     });
 })(jQuery);
