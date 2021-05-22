@@ -49,6 +49,13 @@
     box-sizing: border-box;
     margin-bottom: 15px;
 }
+.columnaP:hover{
+    width: 98%;
+}
+.columnas:hover{
+    width: 48%;
+    
+}
 
 .btn-contenedor{
     display: flex;
