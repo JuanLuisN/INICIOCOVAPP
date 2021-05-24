@@ -10,6 +10,18 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="./js/init.js"></script>
     <script type="text/javascript" src="./js/materialize.min.js"></script>
+    <%if(casos[0].semaforo=='Naranja') {%>
+        <link rel="shortcut icon" href="./Recursos/virusN.png">
+        <%}%>
+        <%if(casos[0].semaforo=='Verde') {%>
+            <link rel="shortcut icon" href="./Recursos/virusV.png">
+        <%}%>
+        <%if(casos[0].semaforo=='Rojo') {%>
+            <link rel="shortcut icon" href="./Recursos/virusR.png">
+        <%}%>
+        <%if(casos[0].semaforo=='Amarillo') {%>
+            <link rel="shortcut icon" href="./Recursos/virusA.png">
+        <%}%>
 
     <link rel="stylesheet" href="./css/Pestañas.css">
     <link rel="stylesheet" href="./css/Contenedor.css">
