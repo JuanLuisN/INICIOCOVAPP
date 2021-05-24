@@ -1,3 +1,4 @@
+<!--Including the header from partials-->
 <%-include('partials/_header.ejs');-%>
 <h5 class="negritas text-center fondo-titulo white-text border">Hospitales de atención</h5>
 <hr class="hr-border">
@@ -7,11 +8,7 @@
                   <% if(data){ %>
                   <% for (var i=0; i < data.length; i++){%>
                     <li> 
-                    <%if(data[i].nombre=='UNIDAD MEDICA FAMILIAR 177 / UMF 177 / CENTRO'){ %>
-                        <div class="collapsible-header blue darken-2 white-text border">
-                        <%  } else{%>
-                        <div class="collapsible-header indigo lighten-5 border border">
-                          <%  } %> 
+                        <div class="collapsible-header <%=data[i].color%>  border">
                             <i class="material-icons">announcement</i>
                             <h6><%=data[i].nombre%></h6>
                         </div>
@@ -47,4 +44,6 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
+
+
 
