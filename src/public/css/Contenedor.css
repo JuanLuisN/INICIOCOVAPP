@@ -50,10 +50,12 @@
     margin-bottom: 15px;
 }
 .columnaP:hover{
-    width: 98%;
+    transform: scale (1.1);
+    transition: 0.4s
 }
 .columnas:hover{
-    width: 48%;
+    transform: scale (1.1);
+    transition: 0.4s
     
 }
 
