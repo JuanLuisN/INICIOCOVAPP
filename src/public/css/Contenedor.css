@@ -34,6 +34,7 @@
     padding: 10px;
     border-radius: 10px;
     width: 95%;
+    transition: 0.4s;
     box-sizing: border-box;
     margin-bottom: 15px;
 }
@@ -46,6 +47,7 @@
     padding: 10px;
     border-radius: 15px;
     width: 45%;
+    transition: 0.4s;
     box-sizing: border-box;
     margin-bottom: 15px;
 }
@@ -54,7 +56,7 @@
     transition: 0.4s;
 }
 .columnas:hover{
-    width: 98%;
+    width: 48%;
     transition: 0.4s;
     
 }
