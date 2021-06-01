@@ -90,6 +90,14 @@
 .imagen{
     border-radius: 10px;
 }
+.collapsible-header {
+    transform: scale(1.0);
+    transition: 0.4s;
+}
+.collapsible-header:hover{
+    transform: scale(1.03);
+    transition: 0.4s;
+}
 
 .botones{
     padding: 10px;
